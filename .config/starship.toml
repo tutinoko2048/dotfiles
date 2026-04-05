@@ -1,0 +1,121 @@
+add_newline = true
+
+# ==============================
+# プロンプトのレイアウト定義
+# ==============================
+format = """
+[╭─](#21c7c7)[](bg)\
+$os\
+$sudo\
+$shell\
+$directory\
+$git_branch\
+$git_status\
+${custom.git_cap}\
+${custom.dir_cap}\
+$line_break\
+[╰─](#21c7c7)\
+$character\
+"""
+
+palette = "default"
+right_format = """$nodejs"""
+
+# ==============================
+# 左側 上段（トップライン）
+# ==============================
+
+[os]
+disabled = false
+format = "[$symbol ](bg:bg fg:fg)"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[shell]
+disabled = true
+format = '[ $indicator ](bg:bg fg:fg)'
+bash_indicator = "bash"
+zsh_indicator = "zsh"
+fish_indicator = "fish"
+powershell_indicator = "pwsh"
+unknown_indicator = "sh"
+
+[sudo]
+disabled = false
+format = '[  ](bg:bg fg:#fff566)'
+
+[directory]
+# Shellからの繋がり（Sudo非アクティブ時）を想定したPowerline
+format = '[](fg:bg bg:lightgray)[ $path ](bg:lightgray fg:#E4E4E4)'
+repo_root_format = '[](fg:bg bg:lightgray)[ $repo_root$path ](bg:lightgray fg:#E4E4E4)'
+truncation_length = 0
+
+[git_branch]
+# Directoryからの繋がり
+format = '[](fg:lightgray bg:#FFFB38)[  $branch ](bg:#FFFB38 fg:#011627)'
+
+[git_status]
+format = '[$all_status$ahead_behind ](bg:#FFFB38 fg:#011627)'
+staged = ' <#ef5350> ${count}</>'
+# 実際の出力で<#ef5350>という文字列がそのまま出る場合は、Starshipの仕様上
+# モジュール内でのインラインカラー変更が効かないため、単なる '  ${count}' に変更してください。
+
+# --- Powerlineの終端を調整するカスタムモジュール ---
+[custom.git_cap]
+require_repo = true
+when = "true"
+format = '[](fg:#FFFB38)'
+
+[custom.dir_cap]
+require_repo = false
+# Gitリポジトリ外の時だけグレーの矢印でフタをする（Bash/Zsh等のUnix環境用）
+when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1; test $? -ne 0'
+format = '[](fg:lightgray)'
+
+
+# ==============================
+# 右側 上段（ライトライン）
+# ==============================
+
+[nodejs]
+format = '[ ](gray)[ $version](bg:gray fg:#3C873A)[](gray)'
+detect_files = ["package.json", ".node-version", "!bunfig.toml"]
+
+
+# ==============================
+# 左側 下段（ボトムライン）
+# ==============================
+
+[character]
+success_symbol = '[❯](#e0f8ff)'
+error_symbol = '[❯](#ef5350)'
+
+# ==============================
+# 設定
+# ==============================
+
+[palettes.default]
+bg = "#0077c2"
+fg = "#ffffff"
+lightgray = "#444444"
+gray = "#303030"

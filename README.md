@@ -29,5 +29,5 @@ echo 'export PATH="/opt/nvim-linux-x86_64/bin:$PATH"' >> ~/.zshenv
 ```
 
 ## memo
-Q. `Cannot find package "tree-sitter-cli".`
+Q. `Cannot find package "tree-sitter-cli".`  
 A. `npm install -g tree-sitter-cli`が必要かも

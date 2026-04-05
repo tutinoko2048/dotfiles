@@ -1,4 +1,8 @@
 # PowerShell setup
+```sh
+winget install --id Microsoft.PowerShell --source winget
+```
+
 ## install oh-my-posh
 ```
 winget install JanDeDobbeleer.OhMyPosh -s winget

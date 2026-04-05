@@ -2,6 +2,7 @@
 ## setup
 1. `~`にclone
 2. `link.ps1` or `link.sh`を実行してシンボリックリンクを作成
+3. powershellのセットアップは[PowerShell Setup](./powershell/README.md)を参照
 
 ## memo
 Q. `Cannot find package "tree-sitter-cli".`

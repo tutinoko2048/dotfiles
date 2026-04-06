@@ -8,6 +8,15 @@
 - install zsh: `sudo apt install zsh`
   - `chsh -s $(which zsh)`
 - install starship: `curl -sS https://starship.rs/install.sh | sh`
+- install [eza](https://github.com/eza-community/eza) (better ls):
+```sh
+sudo mkdir -p /etc/apt/keyrings
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+sudo apt update
+sudo apt install -y eza
+```
 
 ## neovim
 ### windows

@@ -98,6 +98,7 @@ format = '[](fg:lightgray)'
 # ==============================
 
 [nodejs]
+disabled = true
 format = '[ ](gray)[ $version](bg:gray fg:#3C873A)[](gray)'
 detect_files = ["package.json", ".node-version", "!bunfig.toml"]
 

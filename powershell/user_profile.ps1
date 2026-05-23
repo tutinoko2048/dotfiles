@@ -11,6 +11,9 @@ Import-Module -Name Terminal-Icons
 # Alias
 Set-Alias ll ls
 Set-Alias grep findstr
+Set-Alias lg lazygit
+Set-Alias vi nvim
+Set-Alias vim nvim
 
 # Utilities
 function which ($command) {

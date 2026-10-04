@@ -36,4 +36,19 @@ alias ls='eza --icons --group-directories-first'
 alias ll='eza -la --icons --group-directories-first --git'
 alias lt='eza --tree --level=2 --icons'
 
+tx() {
+  if [ -n "$1" ]; then
+    tmux attach-session -t "$1"
+  else
+    tmux attach-session
+  fi
+}
+
+alias bat="batcat"
+
+alias gl='git pull'
+alias gs='git switch'
+
+alias nv='nvim'
+
 eval "$(starship init zsh)"

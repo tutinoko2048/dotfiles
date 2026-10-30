@@ -32,9 +32,9 @@ zstyle ':completion:*' verbose true
 #zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 #zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-alias ls='eza --icons --group-directories-first'
-alias ll='eza -la --icons --group-directories-first --git'
-alias lt='eza --tree --level=2 --icons'
+alias ls='eza --icons=auto --group-directories-first'
+alias ll='eza -la --icons=auto --group-directories-first --git'
+alias lt='eza --tree --level=2 --icons=auto'
 
 tx() {
   if [ -n "$1" ]; then

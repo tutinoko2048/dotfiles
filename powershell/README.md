@@ -32,7 +32,7 @@ add to `$PROFILE`:
 ## powershell utilities install
 ```
 Install-Module posh-git -Scope CurrentUser -Force
-Install-Module Terminal-Icons -Scope CurrentUser -Force
+winget install eza-community.eza
 ```
 
 ## powershell config

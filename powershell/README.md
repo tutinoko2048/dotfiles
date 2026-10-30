@@ -33,7 +33,8 @@ add to `$PROFILE`:
 ```
 Install-Module posh-git -Scope CurrentUser -Force
 winget install eza-community.eza
-winget install ajeetdsouza.zoxide sharkdp.fd
+winget install ajeetdsouza.zoxide
+winget install sharkdp.fd
 ```
 
 ## powershell config

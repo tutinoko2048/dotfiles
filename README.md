@@ -19,7 +19,10 @@ sudo apt install -y eza
 ```
 - install [zoxide](https://github.com/ajeetdsouza/zoxide) (better cd) and [fd](https://github.com/sharkdp/fd) (better find):
 ```sh
-sudo apt install zoxide fd-find
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+ARCH=$(dpkg --print-architecture)
+curl -sSfLO "$(curl -sSfL https://api.github.com/repos/sharkdp/fd/releases/latest | grep -o "https://[^\"]*fd_[^\"]*_$ARCH\.deb")"
+sudo dpkg -i fd_*_$ARCH.deb && rm fd_*_$ARCH.deb
 ```
 
 ## neovim

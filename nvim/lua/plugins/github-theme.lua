@@ -6,7 +6,10 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require('github-theme').setup({
-        -- ...
+        options = {
+          -- default is stdpath('cache') = %TEMP%\nvim on Windows, which gets cleaned up
+          compile_path = vim.fn.stdpath('data') .. '/github-theme',
+        },
       })
     end,
   },

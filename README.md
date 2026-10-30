@@ -17,6 +17,10 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 ```
+- install [zoxide](https://github.com/ajeetdsouza/zoxide) (better cd) and [fd](https://github.com/sharkdp/fd) (better find):
+```sh
+sudo apt install zoxide fd-find
+```
 
 ## neovim
 ### windows

@@ -27,6 +27,8 @@ Set-Alias lg lazygit
 Set-Alias vi nvim
 Set-Alias vim nvim
 
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
 # Utilities
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |

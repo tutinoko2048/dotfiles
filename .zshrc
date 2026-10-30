@@ -45,10 +45,12 @@ tx() {
 }
 
 alias bat="batcat"
+alias fd="fdfind"
 
 alias gl='git pull'
 alias gs='git switch'
 
 alias nv='nvim'
 
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
